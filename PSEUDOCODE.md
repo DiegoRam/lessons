@@ -14,9 +14,9 @@ It’s pretty known that splitting a problem out into several smaller pieces wou
 		“if you have to get clean you room, it’s better to start with your toys, AND THEN with your clothes, AND THEN with your shoes, AND THEN with books, AND SO ON.”
 Always about a problem like little pieces, attack them one by one, and conquer it!
 
-Said so, let’s say there are four basic structure which allow us represent the steps on a computer:
+Said so, let’s say there are six basic structure which allow us represent the steps on a computer:
 
-## IF
+## IF THEN ELSE
 
 This is a decision structure: here we need to perform an action due to a condition:
 
@@ -25,7 +25,7 @@ This is a decision structure: here we need to perform an action due to a conditi
 Let’s see how our convention is going to write down this kind of things.
 
 	
-		- IF(raining == True)
+		- IF(raining == True) THEN
 		|  get my umbrella
 		|
 		- ELSE
@@ -35,7 +35,7 @@ Let’s see how our convention is going to write down this kind of things.
 
 There are so many way to use it according to your particular problem.
 
-		- IF(raining == True)
+		- IF(raining == True) THEN
 		| get my umbrella
 		- ENDIF
 		- takethebus()
@@ -48,7 +48,7 @@ Let’s keep in mind we always have to initialize (using SET clause) the variabl
 
 		SET raining to False
 		SET candies_in_my_pockets_count to 3
-		- IF(raining == True and candies_in_my_pockets_count == 3)
+		- IF(raining == True and candies_in_my_pockets_count == 3) THEN
 		| get more candies
 		- ELSE
 		| eat a candy
@@ -68,3 +68,53 @@ Examples
 		FOR month = 1 to 12 (ok)
 		FOR each employee in the list (good) 
 		FOR empno = 1 to listsize (ok)
+
+
+Even better we can embed the structures each other
+
+		SET total to zero 
+		- FOR number = 1 to 10
+		| - IF(number % 2 == 0)
+		| |  total = total + number
+		| - ENDIF
+		- ENDFOR
+		PRINT total
+
+## WHILE
+
+The WHILE construct is used to specify a loop with a test at the top. The beginning and ending of the loop are indicated by two keywords WHILE and ENDWHILE. The general form is:
+
+		- WHILE Population < Limit
+		| Compute Population as Population + Births - Deaths
+		- ENDWHILE
+
+Example
+
+		- WHILE employee.type NOT EQUAL manager AND personCount < numEmployees
+		| INCREMENT personCount
+		| CALL employeeList.getPerson with personCount RETURNING employee
+		- ENDWHILE
+
+## CASE 
+
+A CASE construct indicates a multiway branch based on conditions that are mutually exclusive. Four keywords, CASE, OF, OTHERS, and ENDCASE, and conditions are used to indicate the various alternatives. The general form is:
+
+		- CASE expression OF
+		| condition 1 : sequence 1 
+		| condition 2 : sequence 2 
+		| … 
+		| condition n : sequence n 
+		- OTHERS: 
+		| default sequence
+		- ENDCASE
+
+Example
+
+		- CASE month OF
+		| 1: friendly_month = “January”
+		| 2: friendly_month = “Febrary”
+		| 2: friendly_month = “March”
+		| …
+		- OTHER
+		| friendly_month = “Invalid month number”
+		- ENDCASE
