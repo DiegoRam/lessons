@@ -176,4 +176,5 @@ and then write out code pretty neat as following
 4. Like the previous on but ask the user for values.
 5. Print all even numbers between 1 and 1000.
 6. Print all divisible by 3 number between 1 and 456.
-7. 
+7. Create a sub procedure which takes an number from an operator and return the sum of all previous natural numbers.
+8. Create a program which convert any Fahrenheit input from operator into Celsius.
