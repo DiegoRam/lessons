@@ -10,11 +10,11 @@ Since we already know the fact that all computers are dumb, but are really good 
 ## Our Mantra
 		divide and conquer
 
-It’s pretty known that splitting a problem out into several smaller pieces would be better to solve the problem like a whole.
-		“if you have to get clean you room, it’s better to start with your toys, AND THEN with your clothes, AND THEN with your shoes, AND THEN with books, AND SO ON.”
-Always about a problem like little pieces, attack them one by one, and conquer it!
+It’s pretty known that splitting a problem out into several smaller pieces would be better to solve the problem as a whole thing.
+		“if you have to get clean your room, you better start with your toys, AND THEN with your clothes, AND THEN with your shoes, AND THEN with books, AND SO ON.”
+Always about a problem like little pieces, attack them one by one, and conquer it all!
 
-Said so, let’s say there are six basic structure which allow us represent the steps on a computer:
+Said so, let’s say there are six basic structure which allow us represent the steps of our algorithm on a computer:
 
 ## IF THEN ELSE
 
@@ -33,7 +33,7 @@ Let’s see how our convention is going to write down this kind of things.
 		|
 		- ENDIF
 
-There are so many way to use it according to your particular problem.
+There are so many ways to use it according to your particular problem.
 
 		- IF(raining == True) THEN
 		| get my umbrella
@@ -70,7 +70,7 @@ Examples
 		FOR empno = 1 to listsize (ok)
 
 
-Even better we can embed the structures each other
+Even better we can embed the structures each other (called nested structures)
 
 		SET total to zero 
 		- FOR number = 1 to 10
@@ -136,7 +136,7 @@ Example
 		| eat a cookie
 		- UNTIL my_belly_hurts == True
 
-## CREATING INVOKING SUBPROCEDURES
+## CREATING AND INVOKING SUBPROCEDURES
 
 Chances are that you begin to create several similar or equals pieces of code.
 Let’s think about surface calculation, we have three triangles dimensions and we need the total surface of each.
@@ -166,7 +166,18 @@ and then write out code pretty neat as following
 		PRINT CALL calculate_surface WITH 40,50
 
 
+## TIPS
 
+Please remember we can compose many conditions using logic operators
+
+		IF(condition1 AND condition2)
+
+The logic operators are:
+
+		AND
+		OR
+		XOR
+		NOT
 
 ### Exercises
 
