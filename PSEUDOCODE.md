@@ -118,3 +118,24 @@ Example
 		- OTHER
 		| friendly_month = “Invalid month number”
 		- ENDCASE
+
+## REPEAT-UNTIL
+
+This loop is similar to the WHILE loop except that the test is performed at the bottom of the loop instead of at the top. Two keywords, REPEAT and UNTIL are used. The general form is:
+
+		- REPEAT
+		| sequence
+		- UNTIL condition
+
+The “sequence” in this type of loop is always performed at least once, because the test is performed after the sequence is executed. At the conclusion of each iteration, the condition is evaluated, and the loop repeats if the condition is false. The loop terminates when the condition becomes true. 
+
+Example
+
+		SET my_belly_hurts to False
+		- REPEAT
+		| eat a cookie
+		- UNTIL my_belly_hurts == True
+
+
+### Exercises
+
