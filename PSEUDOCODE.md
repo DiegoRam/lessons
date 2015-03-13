@@ -189,3 +189,10 @@ The logic operators are:
 6. Print all divisible by 3 number between 1 and 456.
 7. Create a sub procedure which takes an number from an operator and return the sum of all previous natural numbers.
 8. Create a program which convert any Fahrenheit input from operator into Celsius.
+
+
+## Reference
+
+you can find this document in here:
+
+https://github.com/DiegoRam/lessons/blob/master/PSEUDOCODE.md
