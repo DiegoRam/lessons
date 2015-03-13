@@ -136,6 +136,44 @@ Example
 		| eat a cookie
 		- UNTIL my_belly_hurts == True
 
+## CREATING INVOKING SUBPROCEDURES
+
+Chances are that you begin to create several similar or equals pieces of code.
+Let’s think about surface calculation, we have three triangles dimensions and we need the total surface of each.
+
+		SET height1 to 10
+		SET width1 to 20
+		SET height2 to 16
+		SET width2 to 82
+		SET height3 to 40
+		SET width3 to 50
+		PRINT  (height1*height1)/2
+		PRINT  (height2*height2)/2
+		PRINT  (height3*height3)/2
+
+We can factor out “PRINT  (blabla*blabla)/2”
+
+Instead we can do following:
+
+		- DEF calculate_surface(h, w)
+		| RETURNING (h*w)/2
+		- ENDDEF
+
+and then write out code pretty neat as following
+
+		PRINT CALL calculate_surface WITH 10,20
+		PRINT CALL calculate_surface WITH 16,82
+		PRINT CALL calculate_surface WITH 40,50
+
+
+
 
 ### Exercises
 
+1. Print a number
+2. SET a variable named “username” with your name and print it.
+3. Create two variables with 56 and 67 values, and print the product between them.
+4. Like the previous on but ask the user for values.
+5. Print all even numbers between 1 and 1000.
+6. Print all divisible by 3 number between 1 and 456.
+7. 
