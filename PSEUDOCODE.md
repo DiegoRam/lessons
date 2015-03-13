@@ -25,10 +25,46 @@ This is a decision structure: here we need to perform an action due to a conditi
 Let’s see how our convention is going to write down this kind of things.
 
 	
-		- IF
+		- IF(raining == True)
 		|  get my umbrella
 		|
 		- ELSE
 		|  get my hat
 		|
 		- ENDIF
+
+There are so many way to use it according to your particular problem.
+
+		- IF(raining == True)
+		| get my umbrella
+		- ENDIF
+		- takethebus()
+
+Prior example says to us that we’ll always takeabus() but, if we check the wheather and notice that it’s raining, we should get our umbrella.
+
+## Initialize variables
+
+Let’s keep in mind we always have to initialize (using SET clause) the variable we are going to use into our programs.
+
+		SET raining to False
+		SET candies_in_my_pockets_count to 3
+		- IF(raining == True and candies_in_my_pockets_count == 3)
+		| get more candies
+		- ELSE
+		| eat a candy
+		- ENDIF
+
+## FOR
+
+This loop is a specialized construct for iterating a specific number of times, often called a “counting” loop.  Two keywords, FOR and ENDFOR are used. The general form is:
+
+		- FOR iteration bounds
+		| sequence
+		- ENDFOR
+
+Examples
+
+		FOR each month of the year (good) 
+		FOR month = 1 to 12 (ok)
+		FOR each employee in the list (good) 
+		FOR empno = 1 to listsize (ok)
