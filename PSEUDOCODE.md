@@ -1,7 +1,15 @@
+Information Technology (IT), as the name explicitly suggests, is the science that revolves around machines, specifically computers, handling information, i.e. doing stuff with it: storing, retrieving, manipulating, communicating, processing, analysing it, etcetera.
+
+Programming, then (as a solid approximation), is the art of instructing computers, by writing code they can understand, on what to do with the information they are given from various input means (E.G.: typing your name and age with the keyboard and pressing enter, clicking on a certain spot with your mouse, opening a file).
+
+Now, there are two different main aspects regarding programming: one is the logic or meaning of the instructions given, i.e. the way we design and structure our algorithms; the other is the syntax of the instructions we code, which is strictly associated with the language we use. Even though syntax is important, since wrong coding will make our program not understandable and the computer won't be able to execute it, in the end it turns out to play a secondary role when compared to semantics.
+
+(set of ideas and concepts to develop) Information stored in variables. They create different conditions or states that cause the program to follow different courses of action, different paths. This is called "flow". We want to control that flow by telling our program how to behave on every situation. There is a list of structures that allow us to do that, and they are called "control flow structures".
+
 PseudoCode
 __________
 
-PeusoCode is basically a technique which allows us to represent algorithms in terms of a more natural language instead using an specific programming one, like python or c++.
+PseudoCode is basically a technique which allows us to represent algorithms in terms of a more natural language instead using an specific programming one, like python or c++.
 
 That’s why we can say that PseudoCode is extremely similar to the English or any other language you like to talk into.
 
